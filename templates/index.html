@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Web Framework</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .content { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #4CAF50; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Creating a Web Page with Flask</h1>
+
+    <p>This page was created using the Flask framework. Below are the steps I followed to set up Flask and create this simple web page.</p>
+
+    <h2>Installation Steps</h2>
+    <ol>
+        <li>Created a Python virtual environment.</li>
+        <li>Installed Flask using pip: <code>pip install flask</code></li>
+        <li>Created a simple Flask application in <code>app.py</code>.</li>
+    </ol>
+
+    <h2>Code Snippets</h2>
+    <h3>app.py</h3>
+    <pre>
+    from flask import Flask, render_template
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def home():
+        return render_template('index.html')
+
+    if __name__ == '__main__':
+        app.run(debug=True)
+    </pre>
+
+    <h3>index.html</h3>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Flask App&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to My Flask App!&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+
+    <h2>Difficulties and Solutions</h2>
+    <ul>
+        <li><strong>Difficulty:</strong> The Flask app didn't start due to a missing dependency.</li>
+        <li><strong>Solution:</strong> Installed missing dependencies using <code>pip install flask</code>.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Using Flask was relatively simple for creating small web applications. I encountered a few minor issues but they were resolved by checking the Flask documentation.</p>
+</div>
+
+</body>
+</html>
